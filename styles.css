@@ -1,0 +1,235 @@
+:root {
+    --bg-color: hsl(49, 37%, 94%);
+    --typewriterSpeed: 3s;
+    --typewriterCharacters: 24;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: var(--bg-color);
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+    opacity: 0;
+}
+
+/* NavBar Content */
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.navbar__title {
+    position: absolute;
+    left: 5%;
+    font-size: 30px;
+    color: #fff;
+}
+
+.navbar__title a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.nav_container {
+    top: 0;
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+nav.black {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100px;
+}
+
+nav ul {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 35px;
+    paddiing-top: 25px;
+
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav.black ul li a {
+    color: #fff;
+}
+
+nav a:hover {
+    color: #bdbdbd;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #bdbdbd;
+    opacity: 40%;
+
+    position: absolute;
+    top: 100%;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width:100%;
+}
+
+nav .logo {
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    transition: .3s;
+}
+
+nav.black .logo{
+    color: #fff;
+}
+
+.logo a:hover {
+    color: #bdbdbd;
+}
+
+/* TypeWriter Animation */
+.typewriter__container {
+    text-align: center;
+}
+
+.typewriter__content {
+    display: inline-block;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    position: relative;
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    text-align: center;
+    width: max-content;
+    color: #fff;
+}
+
+h1::before,
+h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+h1::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+h1::after {
+    width: .125em;
+    background: black;
+    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 750ms steps(var(--typewriterCharacters)) infinite, glow ease-in;
+}
+
+.subtitle {
+    color: hsl(0, 0%, 0%);
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards, glow 4s ease-in;
+    color: #fff;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    to {
+        text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff
+    }
+
+}
+
+/* About Content */
+section.sec1 {
+    width: 100%;
+    height: 100vh;
+    background: url("BG.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    margin-top: 80px;
+}
+
+.content p {
+    width: 900px;
+    margin: 30px auto;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 30px;
+}
