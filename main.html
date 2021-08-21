@@ -3,84 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script type="text/javascript">
-        $(window).on('scroll', function () {
-        if ($(window).scrollTop()) {
-            $('nav').addClass('black');
-        }
-        else {
-            $('nav').removeClass('black');
-        }
-    })</script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="nav_container">
-            <div class="logo">
-                <h2 class="navbar__title"><a href="#home">MJ</a></h2>
+    <div class="nav-container">
+        <nav class="navbar">
+            <div class="logo">MJ</div>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="#home" class="nav-link">home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="about__content" id="about">
-            <section class="sec1"></section>
-            <section class="content">
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
-                </p>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
-                </p>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
-                </p>
-            </section>
+        </nav>
+    </div>
+    
+    <div class="home-color">
+        <div class="home-container">
+            <div class="home-content">
+                <h4 class="home-title">My name is <br><span>Maxim Jackson</span></h4>
+                <p class="home-subtitle">Front-End Developer</p>
+                <div class="button-container">
+                    <a href="#about" class="button">Learn More</a>
+                </div>
+            </div>
+            <div class="home-portrait">
+                <div class="img-shadow"></div>
+                    <img src="self-portrait.jpg" alt="Self Portrait" class="home-portrait">
+                </div>
         </div>
     </div>
 
-    <div class="typewriter__container">
-        <div class="typewriter__content">
-            <h1 class="home__content">Hello, my name is Maxim.</h1>
-            <p class="subtitle">Welcome to my website!</p>
+    <div class="about-container" id="#about">
+        <div class="about-title">
+            <h2 class="about">About Me</h2>
+        </div>
+        <div class="about-content">
+            <p class="content">I have been developing and programming since 5th grade for nearly 9 years, starting all the way from scratch to developing my first
+                full stack web application last month. I am ready to take on the real world of development
+            </p>
+        </div>
+        <div class="about-img">
+            <img src="" alt="" class="img">
         </div>
     </div>
-
-
-
-
 </body>
+<script src="jsmain.js"></script>
 
 </html>
